@@ -11,7 +11,7 @@ Laravel log viewer
 
 
 ## TL;DR
-Log Viewer for Laravel 5, 6, 7 & 8 (still compatible with 4.2 too) and Lumen. **Install with composer, create a route to `LogViewerController`**. No public assets, no vendor routes, works with and/or without log rotate. Inspired by Micheal Mand's [Laravel 4 log viewer](https://github.com/mikemand/logviewer) (works only with laravel 4.1)
+Log Viewer for Laravel 5, 6, 7, 8 & 9 (still compatible with 4.2 too) and Lumen. **Install with composer, create a route to `LogViewerController`**. No public assets, no vendor routes, works with and/or without log rotate. Inspired by Micheal Mand's [Laravel 4 log viewer](https://github.com/mikemand/logviewer) (works only with laravel 4.1)
 
 ## What ?
 Small log viewer for laravel. Looks like this:
@@ -31,7 +31,7 @@ Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
 
 Add a route in your web routes file:
 ```php 
-Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
+Route::get('logs', [\Rap2hpoutre\LaravelLogViewer\LogViewerController::class, 'index']);
 ```
 
 Go to `http://myapp/logs` or some other route
